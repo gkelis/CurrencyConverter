@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+     <title>Currency Converter</title>
+	 
+	 <script type='text/javascript'>
+	 function swap(){
+		var from=document.converter.curFrom.value;
+		var to=document.converter.curTo.value;
+		var temp=document.converter.curFrom.value;
+		document.converter.curFrom.value=to;
+		document.converter.curTo.value=temp;
+	}
+	 </script>
+
+  </head>
+  <body>
+     <form method=GET name="converter" action="CurrencyConverter.do">
+         <h1>Currency Converter</h1>
+		 <h3> by Fotios Gkelis </h3>
+		 <p><i>using Yahoo!'s Finance Currency Rates</i></p>
+		 </br>
+         <p>Use this form to convert the value between various currencies
+         </p>
+		<p>Currency From:</p> 
+        <select name="curFrom" title="Select 'Currency From' from the dropdown menu">
+		<option>Euro - EUR</option>
+		<option>British Pound - GBP</option>
+		<option>United States Dollar - USD</option>
+		<option>Australian Dollar - AUD</option>
+		<option>Canadian Dollar - CAD</option>
+		<option>Swiss Franc - CHF</option>
+		<option>Chinese Yuan - CNY</option>
+		<option>Hong Kong Dollar - HKD</option>
+		<option>Indonesian Rupiah - IDR</option>
+		<option>Indian Rupee - INR</option>
+		<option>Japanese Yen - JPY</option>
+		<option>Thai Baht - THB</option>
+		<option>Albanian Lek - ALL</option>
+		<option>Algerian Dinar - DZD</option>
+		<option>Aluminium Ounces - XAL</option>
+		<option>Argentine Peso - ARS</option>
+		<option>Aruba Florin - AWG</option>
+		<option>Bahamian Dollar - BSD</option>
+		<option>Bahraini Dinar - BHD</option>
+		<option>Bangladesh Taka - BDT</option>
+		<option>Barbados Dollar - BBD</option>
+		<option>Belarus Ruble - BYR</option>
+		<option>Belize Dollar - BZD</option>
+		<option>Bermuda Dollar - BMD</option>
+		<option>Bhutan Ngultrum - BTN</option>
+		<option>Bolivian Boliviano - BOB</option>
+		<option>Botswana Pula - BWP</option>
+		<option>Brazilian Real - BRL</option>
+		<option>Brunei Dollar - BND</option>
+		<option>Bulgarian Lev - BGN</option>
+		<option>Burundi Franc - BIF</option>
+		<option>Cambodia Riel - KHR</option>
+		<option>Cape Verde Escudo - CVE</option>
+		<option>Cayman Islands Dollar - KYD</option>
+		<option>CFA Franc (BCEAO) - XOF</option>
+		<option>CFA Franc (BEAC) - XAF</option>
+		<option>Chilean Peso - CLP</option>
+		<option>Colombian Peso - COP</option>
+		<option>Comoros Franc - KMF</option>
+		<option>Copper Pounds - XCP</option>
+		<option>Costa Rica Colon - CRC</option>
+		<option>Croatian Kuna - HRK</option>
+		<option>Cuban Peso - CUP</option>
+		<option>Czech Koruna - CZK</option>
+		<option>Danish Krone - DKK</option>
+		<option>Dijibouti Franc - DJF</option>
+		<option>Dominican Peso - DOP</option>
+		<option>East Caribbean Dollar - XCD</option>
+		<option>Ecuador Sucre - ECS</option>
+		<option>Egyptian Pound - EGP</option>
+		<option>El Salvador Colon - SVC</option>
+		<option>Eritrea Nakfa - ERN</option>
+		<option>Estonian Kroon - EEK</option>
+		<option>Ethiopian Birr - ETB</option>
+		<option>Falkland Islands Pound - FKP</option>
+		<option>Fiji Dollar - FJD</option>
+		<option>Gambian Dalasi - GMD</option>
+		<option>Ghanian Cedi - GHC</option>
+		<option>Gibraltar Pound - GIP</option>
+		<option>Gold Ounces - XAU</option>
+		<option>Guatemala Quetzal - GTQ</option>
+		<option>Guinea Franc - GNF</option>
+		<option>Guyana Dollar - GYD</option>
+		<option>Haiti Gourde - HTG</option>
+		<option>Honduras Lempira - HNL</option>
+		<option>Hungarian Forint - HUF</option>
+		<option>Iceland Krona - ISK</option>
+		<option>Iran Rial - IRR</option>
+		<option>Iraqi Dinar - IQD</option>
+		<option>Israeli Shekel - ILS</option>
+		<option>Jamaican Dollar - JMD</option>
+		<option>Jordanian Dinar - JOD</option>
+		<option>Kazakhstan Tenge - KZT</option>
+		<option>Kenyan Shilling - KES</option>
+		<option>Korean Won - KRW</option>
+		<option>Kuwaiti Dinar - KWD</option>
+		<option>Lao Kip - LAK</option>
+		<option>Latvian Lat - LVL</option>
+		<option>Lebanese Pound - LBP</option>
+		<option>Lesotho Loti - LSL</option>
+		<option>Liberian Dollar - LRD</option>
+		<option>Libyan Dinar - LYD</option>
+		<option>Lithuanian Lita - LTL</option>
+		<option>Macau Pataca - MOP</option>
+		<option>Macedonian Denar - MKD</option>
+		<option>Malawi Kwacha - MWK</option>
+		<option>Malaysian Ringgit - MYR</option>
+		<option>Maldives Rufiyaa - MVR</option>
+		<option>Maltese Lira - MTL</option>
+		<option>Mauritania Ougulya - MRO</option>
+		<option>Mauritius Rupee - MUR</option>
+		<option>Mexican Peso - MXN</option>
+		<option>Moldovan Leu - MDL</option>
+		<option>Mongolian Tugrik - MNT</option>
+		<option>Moroccan Dirham - MAD</option>
+		<option>Myanmar Kyat - MMK</option>
+		<option>Namibian Dollar - NAD</option>
+		<option>Nepalese Rupee - NPR</option>
+		<option>Neth Antilles Guilder - ANG</option>
+		<option>Turkish Lira - TRY</option>
+		<option>New Zealand Dollar - NZD</option>
+		<option>Nicaragua Cordoba - NIO</option>
+		<option>Nigerian Naira - NGN</option>
+		<option>North Korean Won - KPW</option>
+		<option>Norwegian Krone - NOK</option>
+		<option>Omani Rial - OMR</option>
+		<option>Pacific Franc - XPF</option>
+		<option>Pakistani Rupee - PKR</option>
+		<option>Palladium Ounces - XPD</option>
+		<option>Panama Balboa - PAB</option>
+		<option>Papua New Guinea Kina - PGK</option>
+		<option>Paraguayan Guarani - PYG</option>
+		<option>Peruvian Nuevo Sol - PEN</option>
+		<option>Philippine Peso - PHP</option>
+		<option>Platinum Ounces - XPT</option>
+		<option>Polish Zloty - PLN</option>
+		<option>Qatar Rial - QAR</option>
+		<option>Romanian New Leu - RON</option>
+		<option>Russian Rouble - RUB</option>
+		<option>Rwanda Franc - RWF</option>
+		<option>Samoa Tala - WST</option>
+		<option>Sao Tome Dobra - STD</option>
+		<option>Saudi Arabian Riyal - SAR</option>
+		<option>Seychelles Rupee - SCR</option>
+		<option>Sierra Leone Leone - SLL</option>
+		<option>Silver Ounces - XAG</option>
+		<option>Singapore Dollar - SGD</option>
+		<option>Slovak Koruna - SKK</option>
+		<option>Slovenian Tolar - SIT</option>
+		<option>Solomon Islands Dollar - SBD</option>
+		<option>Somali Shilling - SOS</option>
+		<option>South African Rand - ZAR</option>
+		<option>Sri Lanka Rupee - LKR</option>
+		<option>St Helena Pound - SHP</option>
+		<option>Sudanese Pound - SDG</option>
+		<option>Swaziland Lilageni - SZL</option>
+		<option>Swedish Krona - SEK</option>
+		<option>Syrian Pound - SYP</option>
+		<option>Taiwan Dollar - TWD</option>
+		<option>Tanzanian Shilling - TZS</option>
+		<option>Tonga Pa'ang - TOP</option>
+		<option>Trinidad & Tobago Dollar - TTD</option>
+		<option>Tunisian Dinar - TND</option>
+		<option>UAE Dirham - AED</option>
+		<option>Ugandan Shilling - UGX</option>
+		<option>Ukraine Hryvnia - UAH</option>
+		<option>Uruguayan New Peso - UYU</option>
+		<option>Vanuatu Vatu - VUV</option>
+		<option>Venezuelan Bolivar Fuerte - VEF</option>
+		<option>Vietnam Dong - VND</option>
+		<option>Yemen Riyal - YER</option>
+		<option>Zambian Kwacha - ZMK</option>
+		<option>Zimbabwe dollar - ZWD</option>
+		</select>
+		<p><button type="button" title="Press here to swap between the selected currencies" onclick="swap()">Swap</button></a>
+		<p>Currency To:</p>
+		<select name="curTo" title="Select 'Currency To' from the dropdown menu">
+		<option>Euro - EUR</option>
+		<option>British Pound - GBP</option>
+		<option>United States Dollar - USD</option>
+		<option>Australian Dollar - AUD</option>
+		<option>Canadian Dollar - CAD</option>
+		<option>Swiss Franc - CHF</option>
+		<option>Chinese Yuan - CNY</option>
+		<option>Hong Kong Dollar - HKD</option>
+		<option>Indonesian Rupiah - IDR</option>
+		<option>Indian Rupee - INR</option>
+		<option>Japanese Yen - JPY</option>
+		<option>Thai Baht - THB</option>
+		<option>Albanian Lek - ALL</option>
+		<option>Algerian Dinar - DZD</option>
+		<option>Aluminium Ounces - XAL</option>
+		<option>Argentine Peso - ARS</option>
+		<option>Aruba Florin - AWG</option>
+		<option>Bahamian Dollar - BSD</option>
+		<option>Bahraini Dinar - BHD</option>
+		<option>Bangladesh Taka - BDT</option>
+		<option>Barbados Dollar - BBD</option>
+		<option>Belarus Ruble - BYR</option>
+		<option>Belize Dollar - BZD</option>
+		<option>Bermuda Dollar - BMD</option>
+		<option>Bhutan Ngultrum - BTN</option>
+		<option>Bolivian Boliviano - BOB</option>
+		<option>Botswana Pula - BWP</option>
+		<option>Brazilian Real - BRL</option>
+		<option>Brunei Dollar - BND</option>
+		<option>Bulgarian Lev - BGN</option>
+		<option>Burundi Franc - BIF</option>
+		<option>Cambodia Riel - KHR</option>
+		<option>Cape Verde Escudo - CVE</option>
+		<option>Cayman Islands Dollar - KYD</option>
+		<option>CFA Franc (BCEAO) - XOF</option>
+		<option>CFA Franc (BEAC) - XAF</option>
+		<option>Chilean Peso - CLP</option>
+		<option>Colombian Peso - COP</option>
+		<option>Comoros Franc - KMF</option>
+		<option>Copper Pounds - XCP</option>
+		<option>Costa Rica Colon - CRC</option>
+		<option>Croatian Kuna - HRK</option>
+		<option>Cuban Peso - CUP</option>
+		<option>Czech Koruna - CZK</option>
+		<option>Danish Krone - DKK</option>
+		<option>Dijibouti Franc - DJF</option>
+		<option>Dominican Peso - DOP</option>
+		<option>East Caribbean Dollar - XCD</option>
+		<option>Ecuador Sucre - ECS</option>
+		<option>Egyptian Pound - EGP</option>
+		<option>El Salvador Colon - SVC</option>
+		<option>Eritrea Nakfa - ERN</option>
+		<option>Estonian Kroon - EEK</option>
+		<option>Ethiopian Birr - ETB</option>
+		<option>Falkland Islands Pound - FKP</option>
+		<option>Fiji Dollar - FJD</option>
+		<option>Gambian Dalasi - GMD</option>
+		<option>Ghanian Cedi - GHC</option>
+		<option>Gibraltar Pound - GIP</option>
+		<option>Gold Ounces - XAU</option>
+		<option>Guatemala Quetzal - GTQ</option>
+		<option>Guinea Franc - GNF</option>
+		<option>Guyana Dollar - GYD</option>
+		<option>Haiti Gourde - HTG</option>
+		<option>Honduras Lempira - HNL</option>
+		<option>Hungarian Forint - HUF</option>
+		<option>Iceland Krona - ISK</option>
+		<option>Iran Rial - IRR</option>
+		<option>Iraqi Dinar - IQD</option>
+		<option>Israeli Shekel - ILS</option>
+		<option>Jamaican Dollar - JMD</option>
+		<option>Jordanian Dinar - JOD</option>
+		<option>Kazakhstan Tenge - KZT</option>
+		<option>Kenyan Shilling - KES</option>
+		<option>Korean Won - KRW</option>
+		<option>Kuwaiti Dinar - KWD</option>
+		<option>Lao Kip - LAK</option>
+		<option>Latvian Lat - LVL</option>
+		<option>Lebanese Pound - LBP</option>
+		<option>Lesotho Loti - LSL</option>
+		<option>Liberian Dollar - LRD</option>
+		<option>Libyan Dinar - LYD</option>
+		<option>Lithuanian Lita - LTL</option>
+		<option>Macau Pataca - MOP</option>
+		<option>Macedonian Denar - MKD</option>
+		<option>Malawi Kwacha - MWK</option>
+		<option>Malaysian Ringgit - MYR</option>
+		<option>Maldives Rufiyaa - MVR</option>
+		<option>Maltese Lira - MTL</option>
+		<option>Mauritania Ougulya - MRO</option>
+		<option>Mauritius Rupee - MUR</option>
+		<option>Mexican Peso - MXN</option>
+		<option>Moldovan Leu - MDL</option>
+		<option>Mongolian Tugrik - MNT</option>
+		<option>Moroccan Dirham - MAD</option>
+		<option>Myanmar Kyat - MMK</option>
+		<option>Namibian Dollar - NAD</option>
+		<option>Nepalese Rupee - NPR</option>
+		<option>Neth Antilles Guilder - ANG</option>
+		<option>Turkish Lira - TRY</option>
+		<option>New Zealand Dollar - NZD</option>
+		<option>Nicaragua Cordoba - NIO</option>
+		<option>Nigerian Naira - NGN</option>
+		<option>North Korean Won - KPW</option>
+		<option>Norwegian Krone - NOK</option>
+		<option>Omani Rial - OMR</option>
+		<option>Pacific Franc - XPF</option>
+		<option>Pakistani Rupee - PKR</option>
+		<option>Palladium Ounces - XPD</option>
+		<option>Panama Balboa - PAB</option>
+		<option>Papua New Guinea Kina - PGK</option>
+		<option>Paraguayan Guarani - PYG</option>
+		<option>Peruvian Nuevo Sol - PEN</option>
+		<option>Philippine Peso - PHP</option>
+		<option>Platinum Ounces - XPT</option>
+		<option>Polish Zloty - PLN</option>
+		<option>Qatar Rial - QAR</option>
+		<option>Romanian New Leu - RON</option>
+		<option>Russian Rouble - RUB</option>
+		<option>Rwanda Franc - RWF</option>
+		<option>Samoa Tala - WST</option>
+		<option>Sao Tome Dobra - STD</option>
+		<option>Saudi Arabian Riyal - SAR</option>
+		<option>Seychelles Rupee - SCR</option>
+		<option>Sierra Leone Leone - SLL</option>
+		<option>Silver Ounces - XAG</option>
+		<option>Singapore Dollar - SGD</option>
+		<option>Slovak Koruna - SKK</option>
+		<option>Slovenian Tolar - SIT</option>
+		<option>Solomon Islands Dollar - SBD</option>
+		<option>Somali Shilling - SOS</option>
+		<option>South African Rand - ZAR</option>
+		<option>Sri Lanka Rupee - LKR</option>
+		<option>St Helena Pound - SHP</option>
+		<option>Sudanese Pound - SDG</option>
+		<option>Swaziland Lilageni - SZL</option>
+		<option>Swedish Krona - SEK</option>
+		<option>Syrian Pound - SYP</option>
+		<option>Taiwan Dollar - TWD</option>
+		<option>Tanzanian Shilling - TZS</option>
+		<option>Tonga Pa'ang - TOP</option>
+		<option>Trinidad & Tobago Dollar - TTD</option>
+		<option>Tunisian Dinar - TND</option>
+		<option>UAE Dirham - AED</option>
+		<option>Ugandan Shilling - UGX</option>
+		<option>Ukraine Hryvnia - UAH</option>
+		<option>Uruguayan New Peso - UYU</option>
+		<option>Vanuatu Vatu - VUV</option>
+		<option>Venezuelan Bolivar Fuerte - VEF</option>
+		<option>Vietnam Dong - VND</option>
+		<option>Yemen Riyal - YER</option>
+		<option>Zambian Kwacha - ZMK</option>
+		<option>Zimbabwe dollar - ZWD</option>
+		</select>
+         <p>Type the amount to be converted in the box</p>
+         <input type=text name="amount">
+         <input type=submit value="Convert" title="Press here to convert">
+		 <p></p>
+	</form>	 
+		 <form method=GET action="CurrencyReport.do" style="display:inline;">
+		 <input type=submit name="report" value="   &#63   " title="Get the report">
+		 </form>
+		 <form method=GET action="CurrencyCode.do" style="display:inline;">
+		 <input type=submit name="code" value="   &#33   " title="Get the entire project in .rar">
+		</form>
+		<br></br>
+		<p><a href="http://gkelis.github.com/CurrencyConverter/">My GitHub Page</a></p>
+  </body>
+</html>
